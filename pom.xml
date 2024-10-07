@@ -15,5 +15,15 @@
 			<artifactId>commons-collections4</artifactId>
 			<version>4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.32</version> <!-- ou la version souhaitée -->
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId> <!-- ou un autre binding comme slf4j-log4j2 -->
+			<version>1.7.32</version> <!-- ou la version souhaitée -->
+		</dependency>
 	</dependencies>
 </project>

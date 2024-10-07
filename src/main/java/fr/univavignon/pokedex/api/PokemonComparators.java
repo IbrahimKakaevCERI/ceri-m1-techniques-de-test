@@ -2,6 +2,7 @@ package fr.univavignon.pokedex.api;
 
 import java.util.Comparator;
 
+
 /**
  * Enumeration of pokemon comparator.
  * 
