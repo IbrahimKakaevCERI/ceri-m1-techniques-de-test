@@ -3,7 +3,7 @@
 version: 2.1
 
 orbs:
-  codecov: codecov/codecov@4.0.1
+  codecov: codecov/codecov@3.0.0
 
 
 executors:
@@ -25,14 +25,12 @@ jobs:
 
       # Run unit tests with Maven
       - run: mvn test
+  example-job:
+  docker:
+    - image: maven:3.8.6-openjdk-11
+  steps:
+    - run: codecov/upload
 
-  upload_to_codecov:
-    executor: maven-executor
-    steps:
-      - checkout
-      - run: 
-          name : Upload to codecov
-          command: mvn clean jacoco:report
 
 
 # Orchestrate jobs using workflows
@@ -45,5 +43,7 @@ workflows:
             branches:
               only:
                 - master  # Exécuter uniquement sur la branche master
-      - upload_to_codecov
+  example-workflow:
+    jobs:
+      - example-job
 
