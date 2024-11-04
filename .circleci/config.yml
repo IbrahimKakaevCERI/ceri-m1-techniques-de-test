@@ -7,9 +7,9 @@ orbs:
 
 
 executors:
-maeven-executor:
-  docker:
-    - image: maven:3.8.6-openjdk-11
+  maven-executor:
+    docker:
+      - image: maven:3.8.6-openjdk-11
 
 # Define a job to be invoked later in a workflow.
 jobs:
@@ -27,12 +27,12 @@ jobs:
       - run: mvn test
 
   upload_to_codecov:
-  executor: maveen-executor
-  steps:
-    - checkout
-    - run: 
-        name : Upload to codecov
-        command: maeven clean jacoco:report
+    executor: maven-executor
+    steps:
+      - checkout
+      - run: 
+          name : Upload to codecov
+          command: mvn clean jacoco:report
 
 
 # Orchestrate jobs using workflows
