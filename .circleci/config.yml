@@ -33,5 +33,6 @@ workflows:
 
   upload-to-codecov:
     jobs:
-      - codecov/upload
+      - codecov/upload:
+          name: upload-to-codecov  # Add a name to the job
 
