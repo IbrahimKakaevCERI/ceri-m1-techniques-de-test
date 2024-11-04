@@ -2,6 +2,9 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+orbs:
+  codecov: codecov/codecov@4.0.1
+
 # Define a job to be invoked later in a workflow.
 jobs:
   build:
@@ -16,8 +19,7 @@ jobs:
 
       # Run unit tests with Maven
       - run: mvn test
-orbs:
-  codecov: codecov/codecov@4.0.1
+
 # Orchestrate jobs using workflows
 workflows:
   version: 2
@@ -28,6 +30,9 @@ workflows:
             branches:
               only:
                 - master  # Exécuter uniquement sur la branche master
+
   upload-to-codecov:
     jobs:
+      - checkout
       - codecov/upload
+
