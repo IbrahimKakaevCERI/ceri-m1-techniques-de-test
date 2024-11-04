@@ -26,10 +26,10 @@ jobs:
       # Run unit tests with Maven
       - run: mvn test
   example-job:
-  docker:
-    - image: maven:3.8.6-openjdk-11
-  steps:
-    - run: codecov/upload
+    docker:
+      - image: maven:3.8.6-openjdk-11
+    steps:
+      - run: codecov/upload
 
 
 
