@@ -5,6 +5,12 @@ version: 2.1
 orbs:
   codecov: codecov/codecov@4.0.1
 
+
+executors:
+maeven-executor:
+  docker:
+    - image: maven:3.8.6-openjdk-11
+
 # Define a job to be invoked later in a workflow.
 jobs:
   build:
@@ -21,13 +27,13 @@ jobs:
       - run: mvn test
 
   upload_to_codecov:
-    docker:
-      - image: circleci/python:3.8
-    steps:
-      - checkout
-      - run:
-          name: Upload to Codecov
-          command: bash <(curl -s https://codecov.io/bash)
+  executor: maveen-executor
+  steps:
+    - checkout
+    - run: 
+        name : Upload to codecov
+        command: maeven clean jacoco:report
+
 
 # Orchestrate jobs using workflows
 workflows:
