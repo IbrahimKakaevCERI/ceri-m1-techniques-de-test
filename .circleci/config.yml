@@ -20,6 +20,15 @@ jobs:
       # Run unit tests with Maven
       - run: mvn test
 
+  upload_to_codecov:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - run:
+          name: Upload to Codecov
+          command: bash <(curl -s https://codecov.io/bash)
+
 # Orchestrate jobs using workflows
 workflows:
   version: 2
@@ -30,9 +39,5 @@ workflows:
             branches:
               only:
                 - master  # Exécuter uniquement sur la branche master
-
-  upload-to-codecov:
-    jobs:
-      - codecov/upload:
-          name: upload-to-codecov  # Add a name to the job
+      - upload_to_codecov
 
