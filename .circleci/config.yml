@@ -29,7 +29,7 @@ jobs:
     docker:
       - image: maven:3.8.6-openjdk-11
     steps:
-      - run: codecov/upload
+      - codecov/upload
 
 
 
@@ -43,7 +43,5 @@ workflows:
             branches:
               only:
                 - master  # Exécuter uniquement sur la branche master
-  example-workflow:
-    jobs:
       - example-job
 
