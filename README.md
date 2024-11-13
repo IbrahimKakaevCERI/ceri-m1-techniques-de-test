@@ -8,8 +8,9 @@
 
 ## Statut du Build et Couverture de Code
 
-![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/https://github.com/ibraborzmk/ceri-m1-techniques-de-test.git)  
-![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/https://github.com/ibraborzmk/ceri-m1-techniques-de-test.git/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
+![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
+![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
+
 
 ## Description du Projet
 
