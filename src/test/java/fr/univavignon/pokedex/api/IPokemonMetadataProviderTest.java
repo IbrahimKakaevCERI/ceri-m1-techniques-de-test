@@ -25,7 +25,9 @@ public class IPokemonMetadataProviderTest {
         assertEquals(126, result.getAttack());
         assertEquals(126, result.getDefense());
         assertEquals(90, result.getStamina());
+        
     }
+
 
     @Test(expected = PokedexException.class)
     public void testGetPokemonMetadata_InvalidIndex() throws PokedexException {
