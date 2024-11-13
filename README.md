@@ -1,3 +1,28 @@
+# Mon Projet
+
+## Informations de l’étudiant
+
+- **Nom :** [Kakaev]
+- **Prénom :** [Ibrahim]
+- **Groupe :** [Classique]
+
+## Statut du Build et Couverture de Code
+
+![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/https://github.com/ibraborzmk/ceri-m1-techniques-de-test.git)  
+![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/https://github.com/ibraborzmk/ceri-m1-techniques-de-test.git/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
+
+## Description du Projet
+
+Ce projet est un exercice de technique de test
+
+## Choix Techniques et Justifications
+
+### Tests et Couverture de Code
+- Nous utilisons **JaCoCo** pour la couverture de code et **Codecov** pour publier et visualiser les résultats.
+- Les builds et tests automatisés sont gérés avec **CircleCI**, offrant un suivi de qualité et de couverture en continu.
+
+
+
 # UCE Génie Logiciel Avancé : Techniques de tests
 
 ## Introduction
