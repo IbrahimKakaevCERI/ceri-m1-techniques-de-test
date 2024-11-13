@@ -23,5 +23,10 @@ public class IPokemonFactoryTest {
         Pokemon result = factory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals("Bulbizarre", result.getName());
         assertEquals(613, result.getCp());
+        assertEquals(64, result.getHp());
+        assertEquals(4000, result.getDust());
+        assertEquals(4, result.getCandy());
+        assertEquals(0.56, result.getIv(), 0.01);
+
     }
 }
