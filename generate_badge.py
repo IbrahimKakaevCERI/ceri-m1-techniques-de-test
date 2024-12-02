@@ -19,4 +19,4 @@ def generate_badge(checkstyle_report, output_file):
         json.dump(badge_data, f)
 
 # Usage example
-generate_badge("checkstyle-report.xml", "badge.json")
+generate_badge("target/checkstyle-result.xml", "badge.json")
