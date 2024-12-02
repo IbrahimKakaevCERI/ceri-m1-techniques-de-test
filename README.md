@@ -11,7 +11,6 @@
 ![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
 ![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-brightgreen)
-![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=your_project_name&metric=alert_status)
 
 
 ## Description du Projet
