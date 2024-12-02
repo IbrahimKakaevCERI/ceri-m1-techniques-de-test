@@ -24,7 +24,7 @@ jobs:
       - run: mvn test
 
       # 4. Lancer Checkstyle
-      - run: mvn checkstyle:check
+      - run: mvn checkstyle:checkstyle
 
       # 5. Générer le rapport de couverture avec JaCoCo
       - run: mvn jacoco:report
