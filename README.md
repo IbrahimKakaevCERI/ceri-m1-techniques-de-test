@@ -10,7 +10,8 @@
 
 ![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
-![Checkstyle](https://img.shields.io/endpoint?url=https://github.com/IbrahimKakaevCERI/ceri-m1-techniques-de-test.git.github.io/badge.json)
+![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-brightgreen)
+![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=your_project_name&metric=alert_status)
 
 
 ## Description du Projet
@@ -62,3 +63,6 @@ Pour chaque rendu vous devez créer un tag à partir du commit qui correspond à
 Si vous ne spécifiez pas de tag, le dernier commit à la date-heure de la fin de séance sera celui considéré.
 
 [^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
+
+
+[def]: https://img.shields.io/endpoint?url=https://github.com/IbrahimKakaevCERI/ceri-m1-techniques-de-test.git.github.io/badge.json

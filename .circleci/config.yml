@@ -32,7 +32,6 @@ jobs:
       # 6. Télécharger le rapport de couverture sur Codecov
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
-      
 
       # 7. Conserver le rapport Checkstyle comme artefact
       - store_artifacts:
