@@ -2,9 +2,9 @@
 
 ## Informations de l’étudiant
 
-- **Nom :** [Kakaev]
-- **Prénom :** [Ibrahim]
-- **Groupe :** [Classique]
+- **Nom :** Kakaev
+- **Prénom :** Ibrahim
+- **Groupe :** Classique
 
 ## Statut du Build et Couverture de Code
 
