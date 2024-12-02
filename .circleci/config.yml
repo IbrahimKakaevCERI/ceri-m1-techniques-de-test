@@ -23,12 +23,20 @@ jobs:
       # 3. Lancer les tests unitaires avec Maven
       - run: mvn test
 
-      # 4. Générer le rapport de couverture avec JaCoCo
+      # 4. Lancer Checkstyle
+      - run: mvn checkstyle:check
+
+      # 5. Générer le rapport de couverture avec JaCoCo
       - run: mvn jacoco:report
 
-      # 5. Télécharger le rapport de couverture sur Codecov
+      # 6. Télécharger le rapport de couverture sur Codecov
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
+
+      # 7. Conserver le rapport Checkstyle comme artefact
+      - store_artifacts:
+          path: target/site/checkstyle.html
+          destination: checkstyle-report
 
 workflows:
   version: 2
@@ -38,4 +46,4 @@ workflows:
           filters:
             branches:
               only:
-                - master  # Exécuter uniquement sur la branche master
+                - master
