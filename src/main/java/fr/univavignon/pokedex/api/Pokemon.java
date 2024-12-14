@@ -7,78 +7,78 @@ package fr.univavignon.pokedex.api;
  */
 public final class Pokemon extends PokemonMetadata {
 
-	/** Combat Point of the pokemon. **/
-	private final int cp;
+    /** Combat Point of the pokemon. **/
+    private final int cp;
 
-	/** HP of the pokemon. **/
-	private final int hp;
+    /** HP of the pokemon. **/
+    private final int hp;
 
-	/** Required dust for upgrading this pokemon. **/
-	private final int dust;
+    /** Required dust for upgrading this pokemon. **/
+    private final int dust;
 
-	/** Required candy for upgrading this pokemon. **/
-	private final int candy;
+    /** Required candy for upgrading this pokemon. **/
+    private final int candy;
 
-	/** IV perfection percentage. **/
-	private final double iv;
-	
-	/**
-	 * Default constructor.
-	 * 
-	 * @param index Pokemon index.
-	 * @param name Pokemon name.
-	 * @param attack Attack level.
-	 * @param defense Defense level.
-	 * @param stamina Stamina level.
-	 * @param cp Pokemon cp.
-	 * @param hp Pokemon hp.
-	 * @param dust Required dust for upgrading this pokemon.
-	 * @param candy Required candy for upgrading this pokemon.
-	 * @param iv IV perfection percentage.
-	 */
-	public Pokemon(
-			final int index,
-			final String name,
-			final int attack,
-			final int defense,
-			final int stamina,
-			final int cp,
-			final int hp,
-			final int dust,
-			final int candy) {
-		super(index, name, attack, defense, stamina);
-		this.cp = cp;
-		this.hp = hp;
-		this.dust = dust;
-		this.candy = candy;
-		// Calcul automatique de l'IV en pourcentage
-    	double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs
-    	this.iv = averageValue; // IV devient la moyenne directe des attributs
-	}
+    /** IV perfection percentage. **/
+    private final double iv;
+    
+    /**
+     * Default constructor.
+     * 
+     * @param index Pokemon index.
+     * @param name Pokemon name.
+     * @param attack Attack level.
+     * @param defense Defense level.
+     * @param stamina Stamina level.
+     * @param cp Pokemon cp.
+     * @param hp Pokemon hp.
+     * @param dust Required dust for upgrading this pokemon.
+     * @param candy Required candy for upgrading this pokemon.
+     * @param iv IV perfection percentage.
+     */
+    public Pokemon(
+            final int index,
+            final String name,
+            final int attack,
+            final int defense,
+            final int stamina,
+            final int cp,
+            final int hp,
+            final int dust,
+            final int candy) {
+        super(index, name, attack, defense, stamina);
+        this.cp = cp;
+        this.hp = hp;
+        this.dust = dust;
+        this.candy = candy;
+        // Calcul automatique de l'IV en pourcentage
+        double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs
+        this.iv = averageValue; // IV devient la moyenne directe des attributs
+    }
 
-	/** Combat Point getter getter. **/
-	public int getCp() {
-		return cp;
-	}
-	
-	/** HP getter. **/
-	public int getHp() {
-		return hp;
-	}
+    /** Combat Point getter getter. **/
+    public int getCp() {
+        return cp;
+    }
+    
+    /** HP getter. **/
+    public int getHp() {
+        return hp;
+    }
 
-	/** Dust getter. **/
-	public int getDust() {
-		return dust;
-	}
+    /** Dust getter. **/
+    public int getDust() {
+        return dust;
+    }
 
-	/** Candy getter. **/
-	public int getCandy() {
-		return candy;
-	}
-	
-	/** IV getter. **/
-	public double getIv() {
-		return iv;
-	}
-	
+    /** Candy getter. **/
+    public int getCandy() {
+        return candy;
+    }
+    
+    /** IV getter. **/
+    public double getIv() {
+        return iv;
+    }
+    
 }
