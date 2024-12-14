@@ -9,18 +9,27 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 
-
+/**
+ * Test class for PokemonTrainerFactory.
+ */
 public class PokemonTrainerFactoryTest {
 
     private IPokedexFactory pokedexFactory;
     private PokemonTrainerFactory pokemonTrainerFactory;
 
+    /**
+     * Sets up the test environment by initializing the mocks and the PokemonTrainerFactory.
+     */
     @Before
     public void setUp() {
         pokedexFactory = mock(IPokedexFactory.class);
         pokemonTrainerFactory = new PokemonTrainerFactory();
     }
 
+    /**
+     * Tests the createTrainer method of PokemonTrainerFactory.
+     * Ensures that the created trainer has the correct name, team, and pokedex.
+     */
     @Test
     public void testCreateTrainer() {
         String trainerName = "Ash";

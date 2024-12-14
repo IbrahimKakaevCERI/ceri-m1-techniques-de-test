@@ -1,19 +1,29 @@
 package fr.univavignon.pokedex.api;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
+/**
+ * Test class for IPokemonTrainerFactory.
+ */
 public class IPokemonTrainerFactoryTest {
     private IPokemonTrainerFactory factory;
 
+    /**
+     * Sets up the test environment by initializing the mock for IPokemonTrainerFactory.
+     */
     @Before
     public void setUp() {
         factory = mock(IPokemonTrainerFactory.class);
     }
 
+    /**
+     * Tests the createTrainer method of IPokemonTrainerFactory.
+     * Ensures that the created trainer has the correct name and team.
+     */
     @Test
     public void testCreateTrainer() {
         IPokedexFactory pokedexFactory = mock(IPokedexFactory.class);

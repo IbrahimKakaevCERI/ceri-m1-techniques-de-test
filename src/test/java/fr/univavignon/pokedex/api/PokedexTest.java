@@ -128,6 +128,6 @@ public class PokedexTest {
         PokemonMetadata metadata = pokedex.getPokemonMetadata(0);
         assertNotNull(metadata);
         assertEquals(0, metadata.getIndex());
-        assertEquals("Bulbizare", metadata.getName());
+        assertEquals("Bulbasaur", metadata.getName());
     }
 }
