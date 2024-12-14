@@ -70,7 +70,7 @@ public class PokedexTest {
         assertEquals(pokemon, pokemons.get(0));
         assertEquals(pokemon2, pokemons.get(1));
 
-        
+
     }
 
     @Test
@@ -79,7 +79,7 @@ public class PokedexTest {
         System.out.println(createdPokemon);
         assertNotNull(createdPokemon);
         assertEquals(0, createdPokemon.getIndex());
-        assertEquals("Bulbizare", createdPokemon.getName());
+        assertEquals("Pikachu", createdPokemon.getName());
         assertEquals(95, createdPokemon.getCp());
         assertEquals(126, createdPokemon.getHp());
         assertEquals(90, createdPokemon.getDust());
