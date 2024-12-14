@@ -5,17 +5,20 @@
 <module name="Checker">
     <!-- Module global -->
     <module name="FileTabCharacter"/>
+    
     <module name="TreeWalker">
         <!-- Modules spécifiques à TreeWalker -->
         <module name="Indentation"/>
         <module name="WhitespaceAround"/>
+        
+        <!-- Modules de vérification de la documentation -->
+        <module name="JavadocType"/>
+        <module name="JavadocMethod"/>
+        <module name="JavadocVariable"/>
     </module>
+    
     <!-- Modules globaux hors de TreeWalker -->
     <module name="LineLength">
         <property name="max" value="120"/>
     </module>
-    <module name="JavadocType"/>
-<module name="JavadocMethod"/>
-<module name="JavadocVariable"/>
-
 </module>
