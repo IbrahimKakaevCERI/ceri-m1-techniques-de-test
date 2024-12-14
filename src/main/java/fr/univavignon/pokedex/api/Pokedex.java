@@ -17,7 +17,7 @@ public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFact
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         // Implementation of the method
         // This is a placeholder implementation, you should replace it with the actual logic
-        return new Pokemon(index,"Bulbizare",1000,500,100,cp,hp,dust,candy);
+        return new Pokemon(index, "Pikachu", 1000, 500, 100, cp, hp, dust, candy);
     }
     
     @Override
@@ -25,7 +25,7 @@ public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFact
             // Implementation of the method
             // This is a placeholder implementation, you should replace it with the actual logic
         return new PokemonMetadata(index, "Bulbizare", 0, 0, 0);
-        }
+    }
     
 
     @Override
