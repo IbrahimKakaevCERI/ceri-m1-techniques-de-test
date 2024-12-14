@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="30">
+  <rect width="75" height="30" fill="#555"/>
+  <rect x="75" width="75" height="30" fill="#4c1"/>
+  <text x="37.5" y="20" fill="#fff" font-family="Verdana" font-size="14" text-anchor="middle">Checkstyle</text>
+  <text x="112.5" y="20" fill="#fff" font-family="Verdana" font-size="14" text-anchor="middle">100%</text>
+</svg>
