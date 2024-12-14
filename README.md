@@ -10,9 +10,9 @@
 
 ![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
-![Checkstyle](https://github.com/IbrahimKakaevCERI/ceri-m1-techniques-de-test.git/target/badge_checkstyle.svg)
+![Checkstyle](https://github.com/IbrahimKakaevCERI/ceri-m1-techniques-de-test.git/checkstyle/badge_checkstyle.svg)
 
-
+/home/bmk/Documents/cours/technique_de_test/ceri-m1-techniques-de-test/target/badge_checkstyle.svg
 
 ## Description du Projet
 
