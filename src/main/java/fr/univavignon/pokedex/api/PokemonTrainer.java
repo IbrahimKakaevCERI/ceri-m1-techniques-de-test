@@ -1,27 +1,33 @@
 package fr.univavignon.pokedex.api;
 
 /**
- * Trainer POJO.
+ * Classe représentant un dresseur Pokémon (trainer).
+ * 
+ * Cette classe contient des informations sur le nom du dresseur, son équipe et son Pokédex.
+ * Elle est utilisée pour gérer un dresseur dans l'univers du Pokedex et interagir avec son équipe
+ * ainsi que ses Pokémon.
  * 
  * @author fv
  */
 public class PokemonTrainer {
 
-    /** Trainer name. **/
+    /** Nom du dresseur. **/
     private final String name;
 
-    /** Trainer team. **/
+    /** Équipe du dresseur. **/
     private final Team team;
     
-    /** Trainer pokedex. **/
+    /** Le Pokédex du dresseur. **/
     private final IPokedex pokedex;
     
     /**
-     * Default constructor.
+     * Constructeur par défaut.
      * 
-     * @param name Trainer name.
-     * @param team Trainer team.
-     * @param pokedex Trainer pokedex.
+     * Ce constructeur initialise les attributs du dresseur (nom, équipe et Pokédex).
+     * 
+     * @param name Le nom du dresseur.
+     * @param team L'équipe du dresseur (une valeur de l'énumération {@link Team}).
+     * @param pokedex Le Pokédex associé au dresseur (implémentation de {@link IPokedex}).
      */
     public PokemonTrainer(final String name, final Team team, final IPokedex pokedex) {
         this.name = name;
@@ -29,17 +35,17 @@ public class PokemonTrainer {
         this.pokedex = pokedex;
     }
     
-    /** Name getter. **/
+    /** Getter pour le nom du dresseur. **/
     public String getName() {
         return name;
     }
 
-    /** Team getter. **/
+    /** Getter pour l'équipe du dresseur. **/
     public Team getTeam() {
         return team;
     }
     
-    /** Pokedex getter. **/
+    /** Getter pour le Pokédex du dresseur. **/
     public IPokedex getPokedex() {
         return pokedex;
     }

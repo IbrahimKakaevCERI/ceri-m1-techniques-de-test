@@ -52,9 +52,8 @@ public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFact
 
     /**
      * Retrieves the metadata of a Pokémon by its name.
-     *
-     * @param name The name of the Pokémon.
-     * @return The metadata of the Pokémon.
+     * This method is not implemented.
+     * @return The size of the Pokémon.
      */
     @Override
     public int size() {

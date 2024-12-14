@@ -2,34 +2,35 @@ package fr.univavignon.pokedex.api;
 
 /**
  * Pokemon metadata POJO.
+ * Cette classe représente les métadonnées d'un Pokémon, y compris son index, son nom, et ses statistiques de combat.
  * 
  * @author fv
  */
 public class PokemonMetadata {
 
-    /** Pokemon index. **/
+    /** Index du Pokémon. **/
     private final int index;
 
-    /** Pokemon name. **/
+    /** Nom du Pokémon. **/
     private final String name;
 
-    /** Pokemon attack level. **/
+    /** Niveau d'attaque du Pokémon. **/
     private final int attack;
 
-    /** Pokemon defense level. **/
+    /** Niveau de défense du Pokémon. **/
     private final int defense;
 
-    /** Pokemon stamina level. **/
+    /** Niveau d'endurance (stamina) du Pokémon. **/
     private final int stamina;
 
     /**
-     * Default constructor.
+     * Constructeur par défaut pour initialiser les métadonnées du Pokémon.
      * 
-     * @param index Pokemon index.
-     * @param name Pokemon name.
-     * @param attack Attack level.
-     * @param defense Defense level.
-     * @param stamina Stamina level.
+     * @param index L'indice unique du Pokémon dans le Pokédex.
+     * @param name Le nom du Pokémon.
+     * @param attack Le niveau d'attaque du Pokémon.
+     * @param defense Le niveau de défense du Pokémon.
+     * @param stamina Le niveau d'endurance du Pokémon.
      */
     public PokemonMetadata(final int index, final String name, final int attack, final int defense, final int stamina) {
         this.index = index;
@@ -38,28 +39,48 @@ public class PokemonMetadata {
         this.defense = defense;
         this.stamina = stamina;
     }
-    
-    /** Index getter. **/
+
+    /**
+     * Retourne l'indice du Pokémon dans le Pokédex.
+     * 
+     * @return L'indice du Pokémon.
+     */
     public int getIndex() {
         return index;
     }
-    
-    /** Name getter.**/
+
+    /**
+     * Retourne le nom du Pokémon.
+     * 
+     * @return Le nom du Pokémon.
+     */
     public String getName() {
         return name;
     }
 
-    /** Attack level getter. **/
+    /**
+     * Retourne le niveau d'attaque du Pokémon.
+     * 
+     * @return Le niveau d'attaque du Pokémon.
+     */
     public int getAttack() {
         return attack;
     }
 
-    /** Defense level getter. **/
+    /**
+     * Retourne le niveau de défense du Pokémon.
+     * 
+     * @return Le niveau de défense du Pokémon.
+     */
     public int getDefense() {
         return defense;
     }
 
-    /** Stamina level getter. **/
+    /**
+     * Retourne le niveau d'endurance (stamina) du Pokémon.
+     * 
+     * @return Le niveau d'endurance du Pokémon.
+     */
     public int getStamina() {
         return stamina;
     }

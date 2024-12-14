@@ -1,40 +1,43 @@
 package fr.univavignon.pokedex.api;
 
 /**
- * Pokemon POJO.
+ * Représente un Pokémon avec des informations détaillées.
+ * Cette classe étend {@link PokemonMetadata} et ajoute des informations spécifiques
+ * au Pokémon telles que les points de combat (CP), les points de vie (HP), les ressources nécessaires
+ * pour l'améliorer et le calcul de l'IV.
  * 
  * @author fv
  */
 public final class Pokemon extends PokemonMetadata {
 
-    /** Combat Point of the pokemon. **/
+    /** Points de combat (CP) du Pokémon. **/
     private final int cp;
 
-    /** HP of the pokemon. **/
+    /** Points de vie (HP) du Pokémon. **/
     private final int hp;
 
-    /** Required dust for upgrading this pokemon. **/
+    /** Poussière nécessaire pour améliorer ce Pokémon. **/
     private final int dust;
 
-    /** Required candy for upgrading this pokemon. **/
+    /** Bonbons nécessaires pour améliorer ce Pokémon. **/
     private final int candy;
 
-    /** IV perfection percentage. **/
+    /** Pourcentage de perfection de l'IV du Pokémon. **/
     private final double iv;
-    
+
     /**
-     * Default constructor.
+     * Constructeur par défaut pour initialiser un Pokémon avec toutes les informations nécessaires.
+     * Le calcul de l'IV est effectué automatiquement en prenant la moyenne des attributs de base.
      * 
-     * @param index Pokemon index.
-     * @param name Pokemon name.
-     * @param attack Attack level.
-     * @param defense Defense level.
-     * @param stamina Stamina level.
-     * @param cp Pokemon cp.
-     * @param hp Pokemon hp.
-     * @param dust Required dust for upgrading this pokemon.
-     * @param candy Required candy for upgrading this pokemon.
-     * @param iv IV perfection percentage.
+     * @param index L'indice du Pokémon dans le Pokédex.
+     * @param name Le nom du Pokémon.
+     * @param attack Le niveau d'attaque du Pokémon.
+     * @param defense Le niveau de défense du Pokémon.
+     * @param stamina Le niveau d'endurance du Pokémon.
+     * @param cp Les points de combat (CP) du Pokémon.
+     * @param hp Les points de vie (HP) du Pokémon.
+     * @param dust La poussière nécessaire pour améliorer ce Pokémon.
+     * @param candy Les bonbons nécessaires pour améliorer ce Pokémon.
      */
     public Pokemon(
             final int index,
@@ -46,39 +49,59 @@ public final class Pokemon extends PokemonMetadata {
             final int hp,
             final int dust,
             final int candy) {
-        super(index, name, attack, defense, stamina);
+        super(index, name, attack, defense, stamina); // Appel du constructeur parent pour initialiser les métadonnées
         this.cp = cp;
         this.hp = hp;
         this.dust = dust;
         this.candy = candy;
-        // Calcul automatique de l'IV en pourcentage
-        double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs
-        this.iv = averageValue; // IV devient la moyenne directe des attributs
+        // Calcul automatique de l'IV en pourcentage comme la moyenne des trois statistiques de base
+        double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs d'attaque, défense et stamina
+        this.iv = averageValue; // L'IV devient la moyenne directe des attributs
     }
 
-    /** Combat Point getter getter. **/
+    /**
+     * Retourne les points de combat (CP) du Pokémon.
+     * 
+     * @return Les points de combat du Pokémon.
+     */
     public int getCp() {
         return cp;
     }
-    
-    /** HP getter. **/
+
+    /**
+     * Retourne les points de vie (HP) du Pokémon.
+     * 
+     * @return Les points de vie du Pokémon.
+     */
     public int getHp() {
         return hp;
     }
 
-    /** Dust getter. **/
+    /**
+     * Retourne la quantité de poussière nécessaire pour améliorer ce Pokémon.
+     * 
+     * @return La poussière nécessaire pour améliorer ce Pokémon.
+     */
     public int getDust() {
         return dust;
     }
 
-    /** Candy getter. **/
+    /**
+     * Retourne la quantité de bonbons nécessaire pour améliorer ce Pokémon.
+     * 
+     * @return Les bonbons nécessaires pour améliorer ce Pokémon.
+     */
     public int getCandy() {
         return candy;
     }
-    
-    /** IV getter. **/
+
+    /**
+     * Retourne le pourcentage de perfection de l'IV du Pokémon.
+     * L'IV est calculé comme la moyenne des valeurs d'attaque, de défense et d'endurance.
+     * 
+     * @return Le pourcentage de perfection de l'IV du Pokémon.
+     */
     public double getIv() {
         return iv;
     }
-    
 }
