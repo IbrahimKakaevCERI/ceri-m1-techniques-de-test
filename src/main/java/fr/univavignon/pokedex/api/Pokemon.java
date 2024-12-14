@@ -55,7 +55,7 @@ public final class Pokemon extends PokemonMetadata {
         this.dust = dust;
         this.candy = candy;
         // Calcul automatique de l'IV en pourcentage comme la moyenne des trois statistiques de base
-        double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs d'attaque, défense et stamina
+        double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs
         this.iv = averageValue; // L'IV devient la moyenne directe des attributs
     }
 

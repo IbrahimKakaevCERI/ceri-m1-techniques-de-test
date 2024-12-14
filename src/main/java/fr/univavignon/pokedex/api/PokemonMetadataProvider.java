@@ -7,7 +7,8 @@ import java.util.Map;
  * Implementation of the PokemonMetadataProvider class.
  */
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
-    private Map<Integer, PokemonMetadata> metadataMap;
+    // Map of Pokémon metadata by index
+    private final Map<Integer, PokemonMetadata> metadataMap;
 
     /**
      * Constructor for the PokemonMetadataProvider class.

@@ -35,17 +35,32 @@ public class PokemonTrainer {
         this.pokedex = pokedex;
     }
     
-    /** Getter pour le nom du dresseur. **/
+
+    /**
+     * Getter pour le nom du dresseur.
+     * 
+     * @return Le nom du dresseur.
+     */
     public String getName() {
         return name;
     }
 
-    /** Getter pour l'équipe du dresseur. **/
+    /**
+     * Getter pour l'équipe du dresseur.
+     * 
+     * @return L'équipe du dresseur.
+     */
+
     public Team getTeam() {
         return team;
     }
     
-    /** Getter pour le Pokédex du dresseur. **/
+    /**
+     * Getter pour le Pokédex du dresseur.
+     * 
+     * @return Le Pokédex du dresseur.
+     */
+    
     public IPokedex getPokedex() {
         return pokedex;
     }
