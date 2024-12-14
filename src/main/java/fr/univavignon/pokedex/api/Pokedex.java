@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFactory {
     // List of Pokémon in the Pokedex
-    private List<Pokemon> pokemons;
+    private final List<Pokemon> pokemons;
 
     /**
      * Constructor for the Pokedex class.
