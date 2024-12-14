@@ -1,8 +1,10 @@
 package fr.univavignon.pokedex.api;
 
-import static org.junit.Assert.assertNotNull;
+
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -10,37 +12,27 @@ import static org.mockito.Mockito.when;
 
 public class PokemonTrainerFactoryTest {
 
-    private IPokemonTrainerFactory pokemonTrainerFactory;
     private IPokedexFactory pokedexFactory;
-    private PokemonTrainer trainer;
+    private PokemonTrainerFactory pokemonTrainerFactory;
 
     @Before
     public void setUp() {
-        pokemonTrainerFactory = PokemonTrainerFactory.getInstance();
         pokedexFactory = mock(IPokedexFactory.class);
-        IPokedex pokedex = mock(IPokedex.class);
-        when(pokedexFactory.createPokedex(PokemonMetadataProvider.getInstance(), PokemonFactory.getInstance())).thenReturn(pokedex);
-        trainer = pokemonTrainerFactory.createTrainer("Ash", Team.VALOR, pokedexFactory);
-    }
-
-    @Test
-    public void testGetInstance() {
-        assertNotNull(PokemonTrainerFactory.getInstance());
+        pokemonTrainerFactory = new PokemonTrainerFactory();
     }
 
     @Test
     public void testCreateTrainer() {
-        assertNotNull(trainer);
-        assertNotNull(trainer.getPokedex());
-    }
+        String trainerName = "Ash";
+        Team team = Team.VALOR;
+        IPokedex pokedex = mock(IPokedex.class);
 
-    @Test
-    public void testTrainerName() {
-        assertNotNull(trainer.getName());
-    }
+        when(pokedexFactory.createPokedex(any(PokemonMetadataProvider.class), any(PokemonFactory.class))).thenReturn(pokedex);
 
-    @Test
-    public void testTrainerTeam() {
-        assertNotNull(trainer.getTeam());
+        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer(trainerName, team, pokedexFactory);
+
+        assertEquals(trainerName, trainer.getName());
+        assertEquals(team, trainer.getTeam());
+        assertEquals(pokedex, trainer.getPokedex());
     }
 }

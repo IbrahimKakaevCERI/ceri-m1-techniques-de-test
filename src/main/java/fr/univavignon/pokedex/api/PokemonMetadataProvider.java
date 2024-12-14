@@ -1,25 +1,25 @@
-
 package fr.univavignon.pokedex.api;
-
+// Implémentation de la classe PokemonMetadataProvider
+import java.util.HashMap;
+import java.util.Map;
 
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
-    private static PokemonMetadataProvider instance;
+    private Map<Integer, PokemonMetadata> metadataMap;
 
-    private PokemonMetadataProvider() {
-    }
-
-    public static PokemonMetadataProvider getInstance() {
-        if (instance == null) {
-            instance = new PokemonMetadataProvider();
-        }
-        return instance;
+    public PokemonMetadataProvider() {
+        metadataMap = new HashMap<>();
+        // Initialiser les métadonnées des Pokémon (exemple)
+        metadataMap.put(0, new PokemonMetadata(0, "Bulbasaur", 126, 126, 90));
+        metadataMap.put(1, new PokemonMetadata(1, "Ivysaur", 156, 158, 120));
+        metadataMap.put(2, new PokemonMetadata(2, "Venusaur", 198, 200, 160));
+        // Ajouter d'autres Pokémon ici
     }
 
     @Override
     public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
-        if (index < 0) {
-            throw new PokedexException("Index out of range");
+        if (!metadataMap.containsKey(index)) {
+            throw new PokedexException("Pokemon metadata not found for index: " + index);
         }
-        return new PokemonMetadata(index, "Pokemon" + index, 0, 0, 0);
+        return metadataMap.get(index);
     }
 }

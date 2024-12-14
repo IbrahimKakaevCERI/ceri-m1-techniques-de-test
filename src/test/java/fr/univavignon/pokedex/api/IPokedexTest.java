@@ -1,12 +1,12 @@
 package fr.univavignon.pokedex.api;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.List;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
+import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class IPokedexTest {
     private IPokedex pokedex;
@@ -18,8 +18,8 @@ public class IPokedexTest {
         pokedex = mock(IPokedex.class);
         
         // Création des instances de Pokémon avec les données fournies
-        bulbasaur = new Pokemon(613, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 0.56);
-        aquali = new Pokemon(2729, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 1.0);
+        bulbasaur = new Pokemon(613, "Bulbizarre", 613, 64, 4000, 4, 0, 0, 0);
+        aquali = new Pokemon(134, "Aquali", 2729, 202, 5000, 4, 0, 0, 0);
     }
 
     @Test

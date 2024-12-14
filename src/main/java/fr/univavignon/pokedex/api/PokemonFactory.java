@@ -1,22 +1,10 @@
-
 package fr.univavignon.pokedex.api;
-
-
+// Implémentation de la classe PokemonFactory
 public class PokemonFactory implements IPokemonFactory {
-    private static PokemonFactory instance;
-
-    private PokemonFactory() {
-    }
-
-    public static PokemonFactory getInstance() {
-        if (instance == null) {
-            instance = new PokemonFactory();
-        }
-        return instance;
-    }
 
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-        return new Pokemon(index, "Pokemon" + index, cp, hp, dust, candy, 0, 0, 0 , 0);
+        // Assuming the other parameters are calculated or default values
+        return new Pokemon(index, "Pikachu", 1000, 500,100, cp, hp, dust, candy);
     }
 }

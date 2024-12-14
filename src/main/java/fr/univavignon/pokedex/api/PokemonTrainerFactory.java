@@ -1,22 +1,12 @@
 package fr.univavignon.pokedex.api;
 
+// Implémentation de la classe PokemonTrainerFactory
 public class PokemonTrainerFactory implements IPokemonTrainerFactory {
-
-    private static PokemonTrainerFactory instance;
-
-    private PokemonTrainerFactory() {
-    }
-
-    public static PokemonTrainerFactory getInstance() {
-        if (instance == null) {
-            instance = new PokemonTrainerFactory();
-        }
-        return instance;
-    }
-
     @Override
     public PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory) {
-        return new PokemonTrainer(name, team, pokedexFactory.createPokedex(PokemonMetadataProvider.getInstance(), PokemonFactory.getInstance()));
-        
+        PokemonMetadataProvider metadataProvider = new PokemonMetadataProvider();
+        PokemonFactory pokemonFactory = new PokemonFactory();
+        IPokedex pokedex = pokedexFactory.createPokedex( metadataProvider, pokemonFactory);
+        return new PokemonTrainer(name, team, pokedex);
     }
 }

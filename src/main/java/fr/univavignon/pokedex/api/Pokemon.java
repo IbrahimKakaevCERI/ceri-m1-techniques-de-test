@@ -45,14 +45,15 @@ public final class Pokemon extends PokemonMetadata {
 			final int cp,
 			final int hp,
 			final int dust,
-			final int candy,
-			final double iv) {
+			final int candy) {
 		super(index, name, attack, defense, stamina);
 		this.cp = cp;
 		this.hp = hp;
 		this.dust = dust;
 		this.candy = candy;
-		this.iv = iv;
+		// Calcul automatique de l'IV en pourcentage
+    	double averageValue = (double) (attack + defense + stamina) / 3.0; // Moyenne des valeurs
+    	this.iv = averageValue; // IV devient la moyenne directe des attributs
 	}
 
 	/** Combat Point getter getter. **/
@@ -81,4 +82,3 @@ public final class Pokemon extends PokemonMetadata {
 	}
 	
 }
-

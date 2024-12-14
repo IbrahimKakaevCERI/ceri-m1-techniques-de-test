@@ -1,20 +1,33 @@
 package fr.univavignon.pokedex.api;
+// Implémentation de la classe Pokedex
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFactory {
+    private List<Pokemon> pokemons;
 
-public class Pokedex implements IPokedex{
-    private final List<Pokemon> pokemons;
-    private  IPokemonMetadataProvider metadataProvider;
-    private  IPokemonFactory pokemonFactory;
-
-    public Pokedex(IPokemonMetadataProvider metadataProvider, IPokemonFactory pokemonFactory) {
-        this.metadataProvider = metadataProvider;
-        this.pokemonFactory = pokemonFactory;
-        pokemons = new ArrayList<>();
+    public Pokedex() {
+        this.pokemons = new ArrayList<>();
+    
     }
+
+    @Override
+    public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
+        // Implementation of the method
+        // This is a placeholder implementation, you should replace it with the actual logic
+        return new Pokemon(index,"Bulbizare",1000,500,100,cp,hp,dust,candy);
+    }
+    
+    @Override
+    public PokemonMetadata getPokemonMetadata(int index) {
+            // Implementation of the method
+            // This is a placeholder implementation, you should replace it with the actual logic
+        return new PokemonMetadata(index, "Bulbizare", 0, 0, 0);
+        }
+    
+
     @Override
     public int size() {
         return pokemons.size();
@@ -23,16 +36,15 @@ public class Pokedex implements IPokedex{
     @Override
     public int addPokemon(Pokemon pokemon) {
         pokemons.add(pokemon);
-        return pokemons.size() - 1; // Return the index of the added Pokemon
+        return pokemons.size() - 1;
     }
 
     @Override
-    public Pokemon getPokemon(int id) throws PokedexException {
-        if (id >= 0 && id < pokemons.size()) {
-            return pokemons.get(id);
-        } else {
-            throw new PokedexException("Index out of range");
+    public Pokemon getPokemon(int index) {
+        if (index < 0 || index >= pokemons.size()) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
         }
+        return pokemons.get(index);
     }
 
     @Override
@@ -42,20 +54,8 @@ public class Pokedex implements IPokedex{
 
     @Override
     public List<Pokemon> getPokemons(Comparator<Pokemon> order) {
-        List<Pokemon> sortedPokemons = new ArrayList<>(pokemons);
-        Collections.sort(sortedPokemons, order);
-        return sortedPokemons;
+        List<Pokemon> sortedList = new ArrayList<>(pokemons);
+        Collections.sort(sortedList, order);
+        return sortedList;
     }
-
-    @Override
-    public PokemonMetadata getPokemonMetadata(int index) throws PokedexException {
-        return metadataProvider.getPokemonMetadata(index);
-    }
-
-    @Override
-    public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
-        return pokemonFactory.createPokemon(index, cp, hp, dust, candy);
-    }
-    
-    
 }

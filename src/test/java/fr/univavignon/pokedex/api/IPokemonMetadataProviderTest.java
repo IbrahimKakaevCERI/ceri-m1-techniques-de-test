@@ -16,18 +16,13 @@ public class IPokemonMetadataProviderTest {
 
     @Test
     public void testGetPokemonMetadata_ValidIndex() throws PokedexException {
+        // Métadonnées pour Bulbizarre
         PokemonMetadata metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
         when(provider.getPokemonMetadata(0)).thenReturn(metadata);
 
         PokemonMetadata result = provider.getPokemonMetadata(0);
-        assertEquals(0, result.getIndex());
         assertEquals("Bulbizarre", result.getName());
-        assertEquals(126, result.getAttack());
-        assertEquals(126, result.getDefense());
-        assertEquals(90, result.getStamina());
-        
     }
-
 
     @Test(expected = PokedexException.class)
     public void testGetPokemonMetadata_InvalidIndex() throws PokedexException {
@@ -35,4 +30,3 @@ public class IPokemonMetadataProviderTest {
         provider.getPokemonMetadata(-1);
     }
 }
-

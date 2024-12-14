@@ -1,36 +1,23 @@
 package fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-
+import static org.mockito.Mockito.mock;
 
 
 public class PokedexFactoryTest {
 
-    @Mock
-    private IPokemonMetadataProvider metadataProvider;
-
-    @Mock
-    private IPokemonFactory pokemonFactory;
-
     private PokedexFactory pokedexFactory;
+    private IPokemonMetadataProvider metadataProvider;
+    private IPokemonFactory pokemonFactory;
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        pokedexFactory = PokedexFactory.getInstance();
-    }
-
-    @Test
-    public void testGetInstance() {
-        PokedexFactory instance1 = PokedexFactory.getInstance();
-        PokedexFactory instance2 = PokedexFactory.getInstance();
-        assertSame(instance1, instance2);
+        pokedexFactory = new PokedexFactory();
+        metadataProvider = mock(IPokemonMetadataProvider.class);
+        pokemonFactory = mock(IPokemonFactory.class);
     }
 
     @Test
