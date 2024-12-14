@@ -10,7 +10,9 @@ import java.util.List;
  * This class manages a collection of Pokémon.
  */
 public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFactory {
-    // List of Pokémon in the Pokedex
+    /**
+     * The list of Pokémon in the Pokedex.
+     */
     private final List<Pokemon> pokemons;
 
     /**
