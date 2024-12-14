@@ -3,7 +3,7 @@ package fr.univavignon.pokedex.api;
 /**
  * Custom exception for pokedex related error.
  *
- * @autor fv
+ * @author fv
  */
 public final class PokedexException extends Exception {
 
