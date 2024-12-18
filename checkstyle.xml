@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+<module name="Checker">
+    <!-- Module global -->
+    <module name="FileTabCharacter"/>
+    
+    <module name="TreeWalker">
+        <!-- Modules spécifiques à TreeWalker -->
+        <module name="Indentation"/>
+        <module name="WhitespaceAround"/>
+        
+        <!-- Modules de vérification de la documentation -->
+        <module name="JavadocType"/>
+        <module name="JavadocMethod"/>
+        <module name="JavadocVariable"/>
+    </module>
+    
+    <!-- Modules globaux hors de TreeWalker -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+    </module>
+</module>
