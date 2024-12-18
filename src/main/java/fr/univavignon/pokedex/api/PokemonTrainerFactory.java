@@ -1,11 +1,9 @@
 package fr.univavignon.pokedex.api;
 
 /**
- * Implémentation de la classe PokemonTrainerFactory.
+ * Implémentation de la classe {@link IPokemonTrainerFactory} pour créer des instances de {@link PokemonTrainer}.
+ * Cette classe fournit une méthode pour créer un dresseur Pokémon avec un nom, une équipe et un Pokédex.
  * 
- * Cette classe permet de créer une instance de {@link PokemonTrainer}.
- * Elle fournit un mécanisme de création de dresseurs Pokémon, incluant la génération
- * d'un Pokédex associé à ce dresseur, ainsi qu'une équipe et un nom.
  * 
  * @author fv
  */
