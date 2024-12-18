@@ -48,15 +48,14 @@ public final class Pokemon extends PokemonMetadata {
             final int cp,
             final int hp,
             final int dust,
-            final int candy) {
-        super(index, name, attack, defense, stamina); // Appel du constructeur parent pour initialiser les métadonnées
+            final int candy,
+            final double iv) {
+        super(index, name, attack, defense, stamina);
         this.cp = cp;
         this.hp = hp;
         this.dust = dust;
         this.candy = candy;
-        // Calcul automatique de l'IV en pourcentage comme la moyenne des trois statistiques de base
-        double averageValue = (double) (attack + defense + stamina) / 3.0;
-        this.iv = averageValue; // L'IV devient la moyenne directe des attributs
+        this.iv = iv;
     }
 
     /**

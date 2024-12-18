@@ -23,7 +23,7 @@ public class PokedexTest {
     @Before
     public void setUp() {
         pokedex = new Pokedex();
-        pokemon = new Pokemon(0, "Pikachu",1000, 500, 100, 500, 100, 100, 100);
+        pokemon = new Pokemon(0, "Pikachu",1000, 500, 100, 500, 100, 100, 100, 0);
     }
 
     /**
@@ -86,7 +86,7 @@ public class PokedexTest {
      */
     @Test
     public void testGetPokemonsWithComparator() {
-        Pokemon pokemon2 = new Pokemon(1, "Bulbizarre", 1000, 500, 100, 100, 100, 100, 100);
+        Pokemon pokemon2 = new Pokemon(1, "Bulbizarre", 1000, 500, 100, 100, 100, 100, 100, 0);
         pokedex.addPokemon(pokemon);
         pokedex.addPokemon(pokemon2);
         List<Pokemon> pokemons = pokedex.getPokemons(Comparator.comparing(Pokemon::getName));

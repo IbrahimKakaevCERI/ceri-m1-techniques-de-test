@@ -18,9 +18,9 @@ public class PokemonComparatorsTest {
      */
     @Before
     public void setUp() {
-        bulbasaur = new Pokemon(0, "Bulbasaur", 615, 78, 351, 78, 54, 65, 23);
-        ivysaur = new Pokemon(1, "Ivysaur", 613, 64, 56, 98, 785, 47, 15);
-        venusaur = new Pokemon(2, "Venusaur", 613, 64, 4000, 4, 74, 36, 98);
+        bulbasaur = new Pokemon(0, "Bulbasaur", 615, 78, 351, 78, 54, 65, 23, 0);
+        ivysaur = new Pokemon(1, "Ivysaur", 613, 64, 56, 98, 785, 47, 15, 0);
+        venusaur = new Pokemon(2, "Venusaur", 613, 64, 4000, 4, 74, 36, 98, 0);
     }
 
     /**

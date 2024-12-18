@@ -27,6 +27,6 @@ public class PokemonFactory implements IPokemonFactory {
     @Override
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         // Création d'un Pokémon avec des valeurs par défaut pour certains attributs (nom, attaque, défense, endurance).
-        return new Pokemon(index, "Pikachu", 1000, 500, 100, cp, hp, dust, candy);
+        return new Pokemon(index, "Pikachu", 1000, 500, 100, cp, hp, dust, candy, 0.9);
     }
 }

@@ -16,7 +16,7 @@ public class PokemonTest {
      */
     @Before
     public void setUp() {
-        pokemon = new Pokemon(1, "Bulbasaur", 126, 126, 90, 1115, 100, 3000, 3);
+        pokemon = new Pokemon(1, "Bulbasaur", 126, 126, 90, 1115, 100, 3000, 3, 0);
     }
 
 

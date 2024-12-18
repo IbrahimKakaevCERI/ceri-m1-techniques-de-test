@@ -8,6 +8,10 @@ import java.util.List;
 /**
  * Implementation of the Pokedex class.
  * This class manages a collection of Pokémon.
+ * 
+ * It implements the {@link IPokedex}, {@link IPokemonMetadataProvider}, and {@link IPokemonFactory} interfaces.
+ * It provides methods for creating, retrieving, and managing Pokémon.
+ * 
  */
 public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFactory {
     /**
@@ -37,7 +41,7 @@ public class Pokedex implements IPokedex, IPokemonMetadataProvider, IPokemonFact
     public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) {
         // Implementation of the method
         // This is a placeholder implementation, you should replace it with the actual logic
-        return new Pokemon(index, "Pikachu", 1000, 500, 100, cp, hp, dust, candy);
+        return new Pokemon(index, "Pikachu", 1000, 500, 100, cp, hp, dust, candy, 0.9);
     }
 
     /**

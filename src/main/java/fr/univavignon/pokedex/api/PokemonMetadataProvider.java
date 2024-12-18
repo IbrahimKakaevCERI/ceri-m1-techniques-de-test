@@ -4,7 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Implementation of the PokemonMetadataProvider class.
+ * Implementation of the {@link IPokemonMetadataProvider} interface to provide metadata for Pokémon.
+ * This class provides the logic for retrieving metadata for Pokémon.
+ * 
  */
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
     /**
