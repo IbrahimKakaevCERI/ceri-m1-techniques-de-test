@@ -47,7 +47,7 @@ public class RocketPokemonFactory implements IPokemonFactory {
      * 
      * @return a random stat value between 0 and 1000
      */
-    private static int generateRandomStat() {
+    static int generateRandomStat() {
         int total = 0;
         for (int i = 0; i < 1000000; i++) {
             Random rn = new Random();
