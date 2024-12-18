@@ -38,6 +38,7 @@ public final class Pokemon extends PokemonMetadata {
      * @param hp Les points de vie (HP) du Pokémon.
      * @param dust La poussière nécessaire pour améliorer ce Pokémon.
      * @param candy Les bonbons nécessaires pour améliorer ce Pokémon.
+     * @param iv Le pourcentage de perfection de l'IV du Pokémon.
      */
     public Pokemon(
             final int index,
