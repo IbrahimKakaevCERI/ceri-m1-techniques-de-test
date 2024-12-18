@@ -34,11 +34,11 @@ jobs:
           file: target/site/jacoco/jacoco.xml
       
       # 7. Génere la java doc
-      - run: mvn javadoc:javadoc
+      - run: mvn -B javadoc:javadoc
 
       # 8. Conserver le rapport Checkstyle comme artefact
       - store_artifacts:
-          path: checkstyle/checkstyle.html
+          path: target/checkstyle/checkstyle.html
           destination: checkstyle-report
 
 workflows:
