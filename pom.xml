@@ -84,7 +84,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <configLocation>checkstyle/checkstyle.xml</configLocation>
+                    <configLocation>target/checkstyle/checkstyle.xml</configLocation>
                 </configuration>
             </plugin>
         </plugins>
