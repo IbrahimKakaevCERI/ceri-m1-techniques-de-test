@@ -12,6 +12,10 @@
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
 ![Checkstyle](https://img.shields.io/badge/Checkstyle-Passed-brightgreen)
 
+## Documentation JavaDoc
+
+La documentation JavaDoc du projet est accessible ici : ![JavaDoc](https://ibrahimkakaevceri.github.io/ceri-m1-techniques-de-test/)
+
 ## Description du Projet
 
 Ce projet est un exercice de technique de test
