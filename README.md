@@ -10,7 +10,7 @@
 
 ![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
-[![Checkstyle](https://img.shields.io/badge/Checkstyle-Passed-brightgreen)](target/checkstyle/checkstyle.html)
+[![Checkstyle](https://img.shields.io/badge/Checkstyle-Passed-brightgreen)](checkstyle/checkstyle.html)
 
 ## Documentation JavaDoc
 
