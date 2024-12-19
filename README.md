@@ -10,7 +10,7 @@
 
 ![Statut du Build](https://circleci.com/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test.svg?style=shield)
 ![Couverture de Code](https://codecov.io/gh/IbrahimKakaevCERI/ceri-m1-techniques-de-test/branch/master/graph/badge.svg?token=CODECOV_TOKEN)
-![Checkstyle](https://img.shields.io/badge/Checkstyle-Passed-brightgreen)
+[![Checkstyle](https://img.shields.io/badge/Checkstyle-Passed-brightgreen)](target/checkstyle/checkstyle.html)
 
 ## Documentation JavaDoc
 
@@ -25,8 +25,7 @@ Ce projet est un exercice de technique de test
 ### Tests et Couverture de Code
 - Nous utilisons **JaCoCo** pour la couverture de code et **Codecov** pour publier et visualiser les résultats.
 - Les builds et tests automatisés sont gérés avec **CircleCI**, offrant un suivi de qualité et de couverture en continu.
-
-
+- Pour l'ésthétique du code nous utillisons **Checkstyle**.
 
 # UCE Génie Logiciel Avancé : Techniques de tests
 
